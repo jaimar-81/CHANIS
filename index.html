@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CHANIS</title>
+    <style>
+      /* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ceb5b7;  /* Fondo de la página usando el rosa cálido */
+    color: #4A6572;  /* Gris oscuro para texto */
+    overflow-x: hidden;
+}
+/* Estilo del encabezado con borde mediano */
+header {
+    background-color: #b5d6d6;  /* Fondo suave de menta para el encabezado */
+    color: #4A6572;  /* Gris oscuro para el texto */
+    padding: 30px 20px; /* Ajuste de espacio dentro del cuadro */
+    text-align: center;
+    border: 4px solid #4A6572; /* Borde más delgado, de 4 píxeles */
+    border-radius: 12px; /* Bordes redondeados */
+}
+
+/* Estilo del título "Chanis" */
+header h1 {
+    font-size: 3em; /* Tamaño más mediano para el título */
+    font-family: 'Roboto Slab', serif; /* Fuente llamativa */
+    color: #4A6572; /* Gris oscuro para el color del título */
+    text-transform: uppercase; /* Mayúsculas */
+    letter-spacing: 5px; /* Espaciado entre las letras */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Sombra más sutil */
+    margin-bottom: 10px; /* Espacio debajo del título */
+}
+
+/* Encabezado */
+header {
+    background-color: #b5d6d6;  /* Fondo suave de menta para el encabezado */
+    color:#4A6572
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+/* Botón en la parte superior */
+.info-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #e69597;  /* Botón con el color rosado vibrante */
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.info-button:hover {
+    background-color: #444;
+    transform: scale(1.1);
+}
+
+/* Breve Información sobre Boca la Caja */
+.brief-info {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #b5d6d6;  /* Fondo suave de menta para la sección de introducción */
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.brief-info p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #4A6572;  /* Gris oscuro para el texto */
+}
+
+/* Sección de galería de imágenes y videos */
+.gallery-section {
+    padding: 40px 20px;
+    margin: 0 auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Estilo de las imágenes y videos */
+.gallery-item {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img,
+.gallery-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-item p {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1.2em;
+    }
+
+    .gallery-item {
+        height: 250px;
+    }
+
+    .info-button {
+        font-size: 1.3em;
+    }
+
+    .brief-info p {
+        font-size: 1.1em;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+}
+
+/* Estilo para el pie de página */
+footer {
+    background-color: #b5d6d6;  /* El mismo color que el encabezado y la sección de introducción */
+    color: #4A6572;  /* Gris oscuro para el texto */
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* Estilos para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .gallery-item {
+        height: 200px;
+    }
+
+    .info-button {
+        font-size: 1.2em;
+        padding: 10px 20px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .brief-info p {
+        font-size: 1em;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>Chanis</h1>
+    </header>
+    <!-- Breve Información sobre Chanis-->
+    <div id="info" class="brief-info">
+    <p>Chanis es un encantador barrio de Panamá, conocido por su cálida comunidad y su rica tradición cultural. Con hermosos paisajes y una mezcla entre lo urbano y lo rural, es el lugar ideal para quienes buscan tranquilidad y conexión con la naturaleza.
+</p>
+    
+    <!-- Botón debajo del texto -->
+    <div class="button-container">
+        <a href="información.html" class="info-button">Más Información</a>
+    </div>
+</div>
+
+
+    <!-- Sección de galería de imágenes y videos -->
+    <div class="gallery-section">
+        <!-- Título de la galería -->
+        <h2 style="text-align: center; font-size: 2.5em; margin-bottom: 20px;">Galería de Imágenes</h2>
+        <div class="grid-container">
+            <!-- Galería de imágenes -->
+            <div class="gallery-item">
+                <img src="img41.jpg" alt="Imagen 41">
+                <p>Iglesia evangélica</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img2.jpg" alt="Imagen 2">
+                <p>Parque de niños</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img3.jpg" alt="Imagen 3">
+                <p>Calle</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img4.jpg" alt="Imagen 4">
+                <p>Calle principal</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img5.jpg" alt="Imagen 5">
+                <p>Parque tranquilo</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img6.jpg" alt="Imagen 6">
+                <p>Naturaleza</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img7.jpg" alt="Imagen 7">
+                <p>Parque familiar</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img8.jpg" alt="Imagen 8">
+                <p>Calle central</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img9.jpg" alt="Imagen 9">
+                <p>Entrada a la barriada</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img10.jpg" alt="Imagen 10">
+                <p>Calle primera</p>
+            </div>
+                        <div class="gallery-item">
+                <img src="img11.jpg" alt="Imagen 11">
+                <p>Plaza Comercial</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img12.jpg" alt="Imagen 12">
+                <p>Area verde</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img13.jpg" alt="Imagen 13">
+                <p>Obra de CSS abandonada</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img14.jpg" alt="Imagen 14">
+                <p>Letrero</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img15.jpg" alt="Imagen 15">
+                <p>Calle urbana</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img16.jpg" alt="Imagen 16">
+                <p>Casas</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img17.jpg" alt="Imagen 17">
+                <p>Urbanizacion</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img18.jpg" alt="Imagen 18">
+                <p>Parque municipal</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img19.jpg" alt="Imagen 19">
+                <p>Virgen que decora su calles</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img20.jpg" alt="Imagen 20">
+                <p>Parque Confort</p>
+            </div>
+                        <div class="gallery-item">
+                <img src="img21.jpg" alt="Imagen 21">
+                <p>Arte hecha por niños</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img22.jpg" alt="Imagen 22">
+                <p>Cancha de basquetball</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img23.jpg" alt="Imagen 23">
+                <p>Cohete infantil</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img24.jpg" alt="Imagen 24">
+                <p>Arte deportivo</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img25.jpg" alt="Imagen 25">
+                <p>Arte Nacional</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img26.jpg" alt="Imagen 26">
+                <p>Arte Religioso</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img27.jpg" alt="Imagen 27">
+                <p>Fallas Tecnicas</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img28.jpg" alt="Imagen 28">
+                <p>Entrada al Parque</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img29.jpg" alt="Imagen 9">
+                <p>Comunidad</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img30.jpg" alt="Imagen 30">
+                <p>Comunidad</p>
+            </div>
+                        <div class="gallery-item">
+                <img src="img31.jpg" alt="Imagen 31">
+                <p>Parque Canino</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img32.jpg" alt="Imagen 32">
+                <p>Comunidad</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img33.jpg" alt="Imagen 33">
+                <p>Obra abandonada</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img34.jpg" alt="Imagen 34">
+                <p>Plaza</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img35.jpg" alt="Imagen 35">
+                <p>Parque</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img36.jpg" alt="Imagen 36">
+                <p>Comunidad</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img37.jpg" alt="Imagen 37">
+                <p>Parque skater</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img38.jpg" alt="Imagen 38">
+                <p>Zona recreativa</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img39.jpg" alt="Imagen 39">
+                <p>Parque</p>
+            </div>
+            <div class="gallery-item">
+                <img src="img40.jpg" alt="Imagen 40">
+                <p>Tienda y Lavanderia</p>
+            </div>
+            
+        </div>
+
+        <!-- Título para la galería de videos -->
+        <h2 style="text-align: center; font-size: 2.5em; margin-bottom: 20px; margin-top: 40px;">Galería de Videos</h2>
+        <div class="grid-container">
+            <!-- Galería de videos -->
+            <div class="gallery-item">
+                <video controls>
+                    <source src="vid1.mp4" type="video/mp4">
+                    Tu navegador no soporta el video.
+                </video>
+                <p>caminando por la comunidad</p>
+            </div>
+            <div class="gallery-item">
+                <video controls>
+                    <source src="vid2.mp4" type="video/mp4">
+                    Tu navegador no soporta el video.
+                </video>
+                <p>Historia de la CSS</p>
+            </div>
+            <div class="gallery-item">
+                <video controls>
+                    <source src="vid3.mp4" type="video/mp4">
+                    Tu navegador no soporta el video.
+                </video>
+                <p>Naturaleza Chill</p>
+            </div>
+            <div class="gallery-item">
+                <video controls>
+                    <source src="vid4.mp4" type="video/mp4">
+                    Tu navegador no soporta el video.
+                </video>
+                <p>Zumba</p>
+            </div>
+            <div class="gallery-item">
+                <video controls>
+                    <source src="vid5.mp4" type="video/mp4">
+                    Tu navegador no soporta el video.
+                </video>
+                <p>Partido entre frenes</p>
+            </div>
+            <div class="gallery-item">
+                <video controls>
+                    <source src="vid6.mp4" type="video/mp4">
+                    Tu navegador no soporta el video.
+                </video>
+                <p>Comprando en el chino</p>
+            </div>
+            <div class="gallery-item">
+                <video controls>
+                    <source src="vid7.mp4" type="video/mp4">
+                    Tu navegador no soporta el video.
+                </video>
+                <p>Caminata por la plaza</p>
+            </div>
+            <div class="gallery-item">
+                <video controls>
+                    <source src="vid8.mp4" type="video/mp4">
+                    Tu navegador no soporta el video.
+                </video>
+                <p>Caminata por la comunidad</p>
+            </div>
+        </div>
+    </div>
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Chanis. Todos los derechos reservados. Jaimar Beitia,Dora Endara,Susan Montero,Julissa Ortiz,Luis Gonzales,Brihtney Morales Fecha de Creacion: 04/12/2024 </p>
+    </footer>
+
+</body>
+</html>

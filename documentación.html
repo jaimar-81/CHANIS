@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Documentación de la Galería</title>
+    <style>
+        /* Reset de márgenes y paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Establecer fuentes y colores base */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ceb5b7;  /* Fondo rosa cálido */
+            color: #4A6572;  /* Gris oscuro para el texto */
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Estilos generales para el header */
+        header {
+            background-color: #b5d6d6;  /* Menta suave para el fondo */
+            color: #4A6572;  /* Gris oscuro para el texto */
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+        }
+
+        header h1 {
+            font-size: 3rem; /* Tamaño grande y llamativo */
+            font-family: 'Roboto', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 15px;
+        }
+
+        /* Estilo del menú de navegación */
+        nav {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 0 15px;
+            padding: 12px 25px;
+            background-color: #444;  /* Gris oscuro */
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #555;
+            transform: translateY(-5px);  /* Efecto de elevación */
+        }
+
+        /* Estilo para las secciones de contenido */
+        .section {
+            padding: 50px 20px;
+            background-color: #f3e6e7;  /* Fondo rosa claro */
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #4A6572;  /* Gris oscuro para el título */
+        }
+
+        .section p {
+            font-size: 1.1rem;
+            text-align: justify;
+            margin-bottom: 20px;
+            color: #4A6572;  /* Gris oscuro para el texto */
+        }
+
+        .section ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .section li {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: #4A6572;  /* Gris oscuro */
+        }
+
+        /* Botón de regreso estilizado */
+        .back-button {
+            display: inline-block;
+            background-color: #e69597;  /* Rosado vibrante */
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            text-align: center;
+            margin-top: 30px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: block;
+            width: 220px;
+            margin: 0 auto;
+        }
+
+        .back-button:hover {
+            background-color: #444;  /* Gris oscuro */
+            transform: translateY(-5px);  /* Efecto de elevación */
+        }
+
+        .back-button:before {
+            content: '\2190';  /* Flecha hacia la izquierda */
+            margin-right: 10px;
+        }
+
+        /* Estilo del pie de página */
+        footer {
+            background-color: #b5d6d6;  /* Menta suave */
+            color: #4A6572;  /* Gris oscuro */
+            padding: 20px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Media Queries para Responsividad */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+
+            .section p {
+                font-size: 1rem;
+            }
+
+            nav a {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+
+            .back-button {
+                width: 180px;
+                padding: 12px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Desarrollo de la Galería -->
+    <div id="historia" class="section">
+        <header>
+            <h1>Documentación de la Galería de Chanis</h1>
+        </header>
+
+        <h2>Desarrollo de la Galería</h2>
+
+        <h3>1. Investigación Previa</h3>
+        <p>Para comprender la historia y la cultura de Chanis, realizamos una investigación exhaustiva utilizando diversas técnicas:</p>
+        <ul>
+            <li><strong>Entrevistas a residentes locales:</strong> Conversamos con habitantes de larga data para recopilar historias personales y detalles de la evolución del barrio.</li>
+            <li><strong>Consulta de fuentes en línea:</strong> Investigamos documentos históricos y recursos digitales sobre la fundación de Chanis.</li>
+            <li><strong>Observación directa:</strong> Visitamos el barrio para capturar elementos representativos de su vida cotidiana.</li>
+        </ul>
+
+        <h3>2. Toma de Fotografías</h3>
+        <p>La fotografía fue clave para capturar la esencia de Chanis. Realizamos diversas tomas en puntos clave:</p>
+        <ul>
+            <li><strong>Lugares emblemáticos:</strong> Fotografías de la iglesia principal, parques y otros símbolos representativos.</li>
+            <li><strong>Aspectos cotidianos:</strong> Imágenes de personas interactuando en espacios públicos y actividades diarias.</li>
+            <li><strong>Zonas históricas:</strong> Capturas de calles y estructuras arquitectónicas significativas.</li>
+        </ul>
+
+        <h3>3. Creación de la Página Web</h3>
+        <p>La página web fue el siguiente paso, utilizando herramientas como:</p>
+        <ul>
+            <li><strong>HTML y CSS:</strong> Para estructurar y diseñar la página de manera eficiente y visualmente atractiva.</li>
+            <li><strong>GitHub Pages:</strong> Para alojar el proyecto en línea de manera accesible.</li>
+        </ul>
+
+        <h3>4. Información Recopilada sobre Chanis</h3>
+        <p>Chanis, fundado en 1950, ha pasado por una evolución importante:</p>
+        <ul>
+            <li><strong>Crecimiento urbano:</strong> Desde una pequeña zona residencial hasta un área conectada con la ciudad.</li>
+            <li><strong>Puntos de interés:</strong> Parques, iglesias y estructuras que destacan su identidad.</li>
+            <li><strong>Tradiciones locales:</strong> Celebraciones y costumbres que perduran hasta hoy.</li>
+        </ul>
+
+        <h3>5. Dificultades Encontradas</h3>
+        <p>A pesar de los esfuerzos, enfrentamos retos técnicos y logísticos:</p>
+        <ul>
+            <li><strong>Retos técnicos:</strong> Compatibilidad entre navegadores y organización del código en GitHub.</li>
+            <li><strong>Desafíos logísticos:</strong> Coordinar entrevistas y recorridos fotográficos debido a la disponibilidad de los involucrados.</li>
+        </ul>
+
+        <h2>Aprendizajes</h2>
+        <p>Este proyecto nos permitió mejorar en diversas áreas:</p>
+        <ul>
+            <li>Mejoramos nuestras habilidades en desarrollo web, especialmente en HTML y CSS.</li>
+            <li>Aprendimos técnicas de edición fotográfica para presentar las imágenes de manera efectiva.</li>
+        </ul>
+
+        <a href="información.html" class="back-button">Atrás</a>
+    </div>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Chanis. Todos los derechos reservados. Jaimar Beitia, Dora Endara, Susan Montero, Julissa Ortiz, Luis Gonzales, Brihtney Morales. Fecha de Creación: 04/12/2024</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Más información</title>
+    <style>
+        /* Reset de márgenes y paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Fuentes y tipografía */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ceb5b7;  /* Fondo de la página usando el rosa cálido */
+            color: #4A6572;  /* Gris oscuro para texto */
+            overflow-x: hidden;
+        }
+
+        /* Estilos generales */
+        header {
+            background-color: #b5d6d6;  /* Fondo suave de menta para el encabezado */
+            color: #4A6572;  /* Gris oscuro para el texto */
+            padding: 30px 20px; /* Ajuste de espacio dentro del cuadro */
+            text-align: center;
+            border: 4px solid #4A6572; /* Borde más delgado, de 4 píxeles */
+            border-radius: 12px; /* Bordes redondeados */
+        }
+
+        header h1 {
+            font-size: 3em; /* Tamaño más mediano para el título */
+            font-family: 'Roboto Slab', serif; /* Fuente llamativa */
+            color: #4A6572; /* Gris oscuro para el color del título */
+            text-transform: uppercase; /* Mayúsculas */
+            letter-spacing: 5px; /* Espaciado entre las letras */
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Sombra más sutil */
+            margin-bottom: 10px; /* Espacio debajo del título */
+        }
+
+        /* Estilo del menú */
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin: 0 15px;
+            padding: 10px 20px;
+            background-color: #444;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #555;
+            transform: scale(1.1);
+        }
+
+        /* Estilo para las secciones */
+        .section {
+            padding: 60px 20px;
+            background-color: #f3e6e7;  /* Fondo rosa claro en las secciones */
+            color: #4A6572;  /* Gris oscuro para el texto en las secciones */
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 1.3em;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: justify;
+        }
+
+        /* Estilo para los botones */
+        .buttons-container {
+            display: flex;  /* Usamos flexbox para centrar los botones */
+            justify-content: center;  /* Centra los botones en el contenedor */
+            gap: 20px;  /* Espacio entre los botones */
+            margin-top: 20px;  /* Separación con el contenido anterior */
+        }
+
+        .button {
+            display: inline-flex; /* Usamos inline-flex para alinear los elementos dentro del botón */
+            align-items: center; /* Alinea verticalmente la flecha y el texto */
+            justify-content: center; /* Centra el contenido */
+            background-color: #e69597;  /* Botón con el color rosado vibrante */
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2em;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #444;
+            transform: scale(1.1);
+        }
+
+        /* Flecha hacia atrás en el botón de Atrás */
+        .back-button:before {
+            content: '\2190'; /* Flecha hacia la izquierda */
+            margin-right: 10px; /* Añade espacio entre la flecha y el texto */
+        }
+
+        /* Flecha hacia adelante solo en el botón de Documentación (a la derecha) */
+        .doc-button:after {
+            content: '\2192'; /* Flecha hacia la derecha */
+            margin-left: 10px; /* Añade espacio entre el texto y la flecha */
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #b5d6d6;  /* El mismo color que el encabezado y la sección de introducción */
+            color: #4A6572;  /* Gris oscuro para el texto */
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 40px; /* Asegura que el pie de página no quede pegado al contenido */
+        }
+
+        /* Estilo del mapa */
+        iframe {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            border: none;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Media Queries para Responsividad */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            iframe {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado con menú -->
+    <header>
+        <h1>Chanis</h1>
+        <p>Descubre todo sobre nuestro Barrio</p>
+    </header>
+
+    <!-- Sección de su historia -->
+    <div id="info" class="section">
+        <h2>Historia</h2>
+        <p>Chanis es una comunidad residencial que se desarrolló a mediados del siglo XX como parte de los esfuerzos de modernización y urbanización de Panamá. Su fundador principal, Tomás Gabriel Duque y Duque, jugó un papel crucial en su creación, y su visión fue ofrecer un espacio accesible y bien planificado para la clase media emergente de la época.</p>
+        <p>La urbanización Chanis se creó en la década de 1950 como parte de un movimiento de expansión urbana en la Ciudad de Panamá. Se caracterizó por sus calles amplias, lotes bien distribuidos y un diseño que buscaba mejorar la calidad de vida de los residentes.</p>
+        <p>El área fue nombrada en honor a la familia Chanis, que tuvo una influencia notable en Panamá durante esa época.</p>
+        <p>En sus inicios, Chanis consistía en viviendas unifamiliares con un diseño arquitectónico funcional. Con el tiempo, la urbanización ha crecido y se ha integrado plenamente al desarrollo de la ciudad, conservando su carácter residencial.</p>
+        <p>Ahora, Chanis es una urbanización con acceso a varias avenidas principales a través de la Santa Elena, que conecta con la avenida Cincuentenario y con el corredor Sur, Panamá Viejo y por Parque Lefevre a vía España. Dentro del barrio hay 16 calles.</p>
+    </div>
+
+    <!-- Sección sobre su fundador -->
+    <div id="historia" class="section">
+        <h2>Fundador: Tomás Gabriel Duque</h2>
+        <p>Tomás Gabriel Duque fue un empresario, político y visionario panameño que tuvo un impacto significativo en el desarrollo económico e inmobiliario de Panamá. Nació a finales del siglo XIX y destacó por su participación en varios proyectos de infraestructura y urbanización.</p>
+        <p>Además de fundar Chanis, Duque estuvo involucrado en proyectos relacionados con el desarrollo de infraestructuras, como carreteras y otras urbanizaciones. Fue reconocido por su capacidad de anticipar las necesidades de vivienda de una población en crecimiento.</p>
+        <p>Su visión marcó un antes y un después en la planificación urbana de Panamá, influyendo en el diseño de futuras comunidades residenciales.</p>
+    </div>
+
+    <!-- Sección de su ubicación -->
+    <div id="lugares" class="section">
+        <h2>Ubicación</h2>
+        <p>La urbanización Chanis se ubica en el corregimiento de Parque Lefevre y fue parte de la Hacienda Santa Elena, propiedad de Ernesto Tisdel Lefevre, quien desde 1910 hasta 1945 tuvo allí una finca de ganado y leche.</p>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7880.928027778893!2d-79.48705228936532!3d9.021366010168201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8faca9f184d1a9b3%3A0xe1f1d6e8d2ce6459!2sChanis%2C%20Panam%C3%A1%2C%20Provincia%20de%20Panam%C3%A1!5e0!3m2!1ses-419!2spa!4v1732489571132!5m2!1ses-419!2spa"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+
+    <!-- Botón de regreso y documentación -->
+    <div class="buttons-container">
+        <a href="index.html" class="button back-button">Atrás</a>
+        <a href="documentación.html" class="button doc-button">Documentación</a>
+    </div>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Chanis. Todos los derechos reservados. Jaimar Beitia, Dora Endara, Susan Montero, Julissa Ortiz, Luis Gonzales, Brihtney Morales Fecha de Creacion: 04/12/2024</p>
+    </footer>
+
+</body>
+</html>
